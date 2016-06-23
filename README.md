@@ -1,2 +1,2 @@
 # Module Enviroment
-Sense the enviroment of the robot.
+Interacts with the enviroment of the robot.

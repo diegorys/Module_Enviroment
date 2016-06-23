@@ -1,0 +1,19 @@
+#######################################
+# Syntax Coloring Map For ModuleEyes
+####################################### 
+# Class
+#######################################
+
+ModuleEnviroment	KEYWORD1
+
+#######################################
+# Methods and Functions 
+#######################################	
+
+enableIR	KEYWORD2
+attachTemperature	KEYWORD2
+attachLight	KEYWORD2
+sendIR	KEYWORD2
+getIR	KEYWORD2
+getTemperature	KEYWORD2
+getLight	KEYWORD2
