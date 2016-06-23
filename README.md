@@ -1,2 +1,2 @@
-# Module_Head
-Sensors head and IR Emitter.
+# Module Enviroment
+Sense the enviroment of the robot.
