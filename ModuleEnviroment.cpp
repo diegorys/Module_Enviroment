@@ -55,6 +55,7 @@ void ModuleEnviroment::attachLight(int pin)
 void ModuleEnviroment::sendIR(IRTYPES protocol, unsigned long code)
 {
 	emitter.send(protocol, code, 32);
+	receiver.enableIRIn();
 }
 
 /**
@@ -62,17 +63,16 @@ void ModuleEnviroment::sendIR(IRTYPES protocol, unsigned long code)
  */
 unsigned long ModuleEnviroment::getIR()
 {
+	code = REPEAT;
 
 	if (receiver.GetResults(&decoder)) {		
 		decoder.decode();//decode the signal
 		//decoder.DumpResults();//dump the results on the serial monitor
 		code = decoder.value;
-		Serial.print("IR\t\t");
-    	Serial.println(code, HEX);
 		receiver.resume(); //restart the receiver
 	}
 
-  	return 0xFFFFFFFF;
+  	return code;
 }
 
 /**

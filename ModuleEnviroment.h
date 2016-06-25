@@ -69,8 +69,6 @@ class ModuleEnviroment {
 		 */
 		float getLight();
 
-		unsigned long code;
-
 	private:
 
 		/** Attributes **/
@@ -85,6 +83,7 @@ class ModuleEnviroment {
 		IRrecv receiver;
 		IRdecode decoder;
 		IRTYPES protocol = UNKNOWN;
+		unsigned long code;
 
 		float Vin = 5.0;
 		float Rfija = 2200;
